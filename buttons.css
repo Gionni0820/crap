@@ -31,7 +31,7 @@ margin-top: -100px;  /* Centers the image horizontally with some margin */
 .image-text {
 font-family: Comic;
   position: absolute;           /* Positions the text within the container */
-  top: 45%;                     /* Vertically center the text */
+  top: 40%;                     /* Vertically center the text */
   left: 50%;                    /* Horizontally center the text */
   transform: translate(-50%, -50%); /* Adjust for exact centering */
   color: black;                 /* Text color */
