@@ -1,0 +1,42 @@
+/* Style for the clickable image */
+.clickable-image {
+  display: block;              /* Makes the link a block element to cover the image */
+  text-decoration: none;       /* Removes underline from the link */
+  position: relative;          /* Sets up relative positioning for the container */
+  width: 100%;                 /* Make the image container take the full width */
+  max-width: 600px;            /* Optional: Set a max width for the image */
+  margin: 200px auto;   
+margin-top: -100px;  /* Centers the image horizontally with some margin */
+}
+
+/* Image container */
+.image-container {
+ position: absolute;         /* Position the button within the header container */
+  bottom: -200px;              /* Push it below the header */
+  left: 50%;                  /* Center the button */
+  transform: translateX(0%);  /* Set a fixed height for the image container */
+  z-index: 10;                /* Ensures it's above other content */
+ 
+}
+
+/* Image styling */
+.image {
+  width: 100%;                  /* Ensures the image stretches to fit the container */
+  height: 100%;                 /* Maintains the image height */
+  object-fit: cover;            /* Ensures the image covers the area of the container */
+  display: block;               /* Ensures no space below the image */
+}
+
+/* Text overlay on the image */
+.image-text {
+font-family: Comic;
+  position: absolute;           /* Positions the text within the container */
+  top: 50%;                     /* Vertically center the text */
+  left: 50%;                    /* Horizontally center the text */
+  transform: translate(-50%, -50%); /* Adjust for exact centering */
+  color: black;                 /* Text color */
+  text-align: center;           /* Center-align the text */
+  padding: 10px;                /* Optional: Padding around the text */
+  border-radius: 5px;           /* Optional: Rounded corners for the text background */
+}
+

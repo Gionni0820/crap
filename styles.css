@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'big_noodle_titling';
+    src: url('fonts/big_noodle_titling.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratalternates-black';
+    src: url('fonts/montserratalternates-black.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+  text-align: center;
+  
+}
+body {
+  /*background-color: powderblue;*/
+   font-family: arial;
+   background-image: url('Media/background-full.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: top;
+   background-attachment: fixed;
+    margin: 0;
+   padding: 0;
+   width: 100%;
+   text-align: center;
+}
+
+h1 {
+   font-family: 'big_noodle_titling', sans-serif;
+  text-align: center;
+}
+h3 {
+  font-family: 'montserratalternates-black';
+  text-align: center;
+}
+h4 {
+  font-family: arial;
+  text-align: center;
+}
+h5 {
+  font-family: arial;
+  text-align: center;
+}
+h6 {
+  font-family: arial;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+a {
+	font-family: arial;
+  font-size: 20px;
+}
+#para1 {
+  text-align: center;
+  color: green;
+}
+.center {
+  text-align: center;
+  color: red;
+}
+
+p.large {
+  font-size: 300%;
+}
+
+.font-mont {
+	font-family: 'montserratalternates-black';
+}
+
+.outline {
+	border:2px solid Tomato;
+}
+.side-color {
+	border-left: 6px solid cyan;
+	padding: 4px;
+}
+.round-boarder {
+  border: 5px solid white;
+  border-radius: 7px;
+ width: 500px;
+  display: inline; 
+  background-color: white;
+  
+}
+p.border {
+	border-style: solid;
+  border-width: 700px 400px;
+}
+
+.link{
+  color: blue; /* Default link color */
+  text-decoration: underline; /* Removes underline */
+}
+.link:hover {
+  color: red; /* Changes color on hover */
+}
+
+.link:active {
+  color: purple; /* Color when clicked */
+}
+
+.link:visited {
+  color: #46a1ab; /* Color after the link is visited */
+}
+.montserrat {
+	font-family: 'montserratalternates-black';
+}
+.container {
+  position: relative;
+  background: url('Media/background-full.png') no-repeat center center/cover;
+     background-size: cover;
+   background-repeat: no-repeat;
+   background-position: top;
+   background-attachment: fixed;
+  width: 100%; /* Ensure it takes full width */
+}
+
+.overlay {
+  margin: 0 auto;
+  width: 80%; /* Adjust size */
+  height: 3000px; /* Adjust size */
+  background: transparent;
+  padding: 100px;
+  
+}
+
+.overlay2 {
+  margin: 0 auto;
+  width: 60%; /* Adjust size */
+  height: 3000px; /* Adjust size */
+  background: #f7eddf;
+  padding: 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  
+}
+
+.round {
+	border: 30px solid white;
+	 border-radius: 30px;
+	  background-color: white;
+}
+.linkthing {
+	margin: 10px; 
+	border: 9px solid #a9c4c2; 
+	border-radius: 9px; 
+	background-color: #a9c4c2;
+}
+.linkagain {
+	margin: 10px; 
+	border: 15px solid #e6ebfc; 
+	border-radius: 10px; 
+	background-color: #e6ebfc;
+}
+
+.toppart {
+  position: absolute;           /* Fixes the header at the top of the page */
+  top: 0;                    /* Ensures it's at the top of the viewport */
+  left: 50%;                 /* Positions it at the center horizontally */
+  transform: translateX(-50%); /* Shifts the element left by 50% of its own width to center it */
+  width: 90%;                /* Set the width of the header (adjust as needed) */
+  height: 200px;             /* Fixed height for the header */
+  background-image: url('Media/topbackground.png');  /* Your background image */
+  background-size: cover;    /* Ensures the background image covers the entire header */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  z-index: 20;                /* Ensures it's above other content */
+  box-sizing: border-box;    /* Ensures padding and border don't affect the width */
+
+}
+
+/* Overlay for Text */
+.overlay {
+  position: absolute;        /* Position the content inside the header */
+  top: 50%;                  /* Center the content vertically */
+  left: 50%;                 /* Center the content horizontally */
+  transform: translate(-50%, -50%); /* Ensure exact centering */
+  text-align: center;        /* Align text in the center */
+  color: white;              /* White text color */
+}
+
+
+.toppart-image {
+  position: absolute;        /* Position the image relative to the header */
+  top: -5px;                /* Adjust this value to control how much the image overlaps */
+  left: 25%;                 /* Center the image horizontally */
+  transform: translateX(-50%); /* Shifts the element to the center */
+  width: 200px;              /* Set the width of the overlapping image */
+  height: auto;              /* Maintain aspect ratio of the image */
+  z-index: 20;                /* Ensure it is above the header content */
+}
+.toppart-button {
+  position: absolute;        /* Position the image relative to the header */
+  top: -5px;                /* Adjust this value to control how much the image overlaps */
+  left: 25%;                 /* Center the image horizontally */
+  transform: translateX(-50%); /* Shifts the element to the center */
+  width: 200px;              /* Set the width of the overlapping image */
+  height: auto;              /* Maintain aspect ratio of the image */
+  z-index: 2;                /* Ensure it is above the header content */
+}
+.headertext {
+	color: white; 
+	font-size: 65px;
+	position: absolute;
+	top: -10px;
+	left: 50%;
+}
+
