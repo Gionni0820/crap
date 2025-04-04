@@ -11,9 +11,8 @@
     font-weight: normal;
     font-style: normal;
 }
-* {
+body, h1, h2, h3, h4, h5, h6, p, a {
   text-align: center;
-  
 }
 body {
   /*background-color: powderblue;*/
@@ -135,7 +134,6 @@ p.border {
 .overlay2 {
   margin: 0 auto;
   width: 60%; /* Adjust size */
-  height: 3000px; /* Adjust size */
   background: #f7eddf;
   padding: 50px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -218,4 +216,58 @@ p.border {
   object-fit: cover;       /* Ensures the image covers the entire area without distortion */
   border-radius: 10%;      /* Creates a circular shape by rounding the corners */
   overflow: hidden;        /* Ensures the image is cropped to fit the rounded shape */
+}
+.profile-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  text-align: left; /* This is important to override the global center */
+}
+
+.profile-left img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;         /* makes the image circular */
+}
+.blog-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0rem auto;
+  text-align: left;
+    margin-left: 5px; /* <-- adjust this value */
+}
+
+.blog-post .text {
+  flex: 2;
+}
+
+.blog-post .image {
+flex: 1; /* Let the image grow and shrink with the container */
+  max-width: 100%; /* Ensure the image does not overflow */
+}
+
+.blog-post .image img {
+   width: 145%; /* Make the image responsive */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 10px;
+}
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.username {
+  font-weight: bold;
+  color: black;
+}
+
+.timestamp {
+  font-size: 0.9rem;
+  color: gray;
 }
