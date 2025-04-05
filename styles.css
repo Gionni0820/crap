@@ -120,6 +120,8 @@ p.border {
    background-position: top;
    background-attachment: fixed;
   width: 100%; /* Ensure it takes full width */
+  border-radius: 7px;
+
 }
 
 .overlay {
