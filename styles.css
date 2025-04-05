@@ -251,7 +251,7 @@ flex: 1; /* Let the image grow and shrink with the container */
 }
 
 .blog-post .image img {
-   width: 145%; /* Make the image responsive */
+   width: 105%; /* Make the image responsive */
   height: auto; /* Maintain the aspect ratio */
   border-radius: 10px;
 }
