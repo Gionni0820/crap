@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html>
+<head>
+<title>Martha Speaks | PBS KIDS</title>
+<style type="text/css">/* <![CDATA[ */
+@import "css/base.css";
+
+body { font: 12px arial,helvetica,sans-serif; }
+span { color: #666; }
+p {
+	color: #222;
+	width: 585px;
+	margin: 16px 0 0 210px;
+}
+a { color: #66c; }
+
+
+div#footernav {
+	font-size:12px;
+	margin-top:1em;
+}
+
+div#boilerplate p {
+	font-size:10px;
+}
+
+/* ]]> */</style>
+<!--#include virtual="/includes/flash/detect.html" -->
+<!--#include virtual="/includes/global/global-pbskids-head.html" -->
+
+<!-- new for html5 nav-->
+<script type="text/javascript" src="j/jquery.min.js"></script>
+<script type="text/javascript" src="j/jquery.jblitter.js"></script>
+<script type="text/javascript" src="j/navbar1000_main.js"></script>
+</head>
+
+
+<body class="marthaLanding"><!--#set var="showSlug" value="martha" --><!--#include virtual="/includes/grownupbar/grownupbar-markup.html" -->
+<!--#include virtual="/includes/globalinc.html" -->
+
+
+<!--start nav: home page -->
+<div id="globalnav" style="background-image:url('i/kitchenfloor.png'); background-repeat:no-repeat; width:1000px;">
+	
+	<a href="/pbskidsgo/"><img src="i/pbslogo.gif" [attributes] style="margin-left:10px; margin-right:10px; margin-bottom:55px;" /></a>
+
+	<canvas id="logo" width="205" height="133" style="cursor:pointer;">
+		<a href="index.html"><img src="i/static_marthalogo.png"></a>
+	</canvas>
+
+	<img src="i/spacer.gif" width="15px">
+
+	<canvas id="games" width="143" height="133" style="cursor:pointer;">
+		<a href="games/index.html"><img src="i/static_steak.png"></a>
+	</canvas>
+
+	<canvas id="print" width="163" height="133" style="cursor:pointer;">
+		<a href="prints/index.html"><img src="i/static_chickenleg.png"></a>
+	</canvas>
+
+	<canvas id="video" width="146" height="133" style="cursor:pointer;">
+		<a href="videos/index.html"><img src="i/static_hotdog.png"></a>
+	</canvas>
+	
+	<!-- Puppals
+	<img src="i/spacer.gif" width="20px">
+	<canvas id="puppals" width="122" height="133" style="cursor:pointer;">
+		<a href="puppals/index.html">Puppals</a>
+	</canvas>
+	-->
+	
+	<!--Martha's Stories	-->
+	<canvas id="stories" width="199" height="133" style="cursor:pointer;">
+		<a href="stories/index.html"><img src="i/static_storybook.png"></a>
+	</canvas>
+
+	
+</div>
+<!--end nav: home page -->
+
+
+<div id="flashcontent"><div id="getflash">To play the interactive games and videos on this site, you'll need the FREE Flash player version 9 or higher. <a href="http://pbskids.org/cgi-registry/kidsbridge.cgi?context=martha_pt_flash">Get the Flash player here</a>.</div></div>
+<script type="text/javascript">
+    var fo = new PBS_SWFObject("msp_master.swf", "indx", "1050", "540", "9", "#9ed45c");
+	fo.addVariable("sctn","home");
+	fo.addVariable("page","homepage");
+	fo.addVariable("relative","0");
+	fo.addVariable("root","");
+    fo.addParam("allowScriptAccess","always");
+PBS_enable_cdn(fo);
+fo.write("flashcontent");
+
+</script>
+
+<!--#if expr="$STATION_TVDATA_NAME=/^[A-Z]{4}$/" --><!--#set var="STATION_IMAGE" value="$STATION_TVDATA_NAME.gif" --><!--#else --><!--#set var="STATION_IMAGE" value="PBS.gif" --><!--#endif -->
+
+<!-- testing logo swap-->
+<!--<a href="/pbskidsgo/"><img src="i/pbslogo.gif" [attributes] /></a> -->
+
+<div id="footernav">
+<a href="games/index.html">Games | 
+<a href="prints/index.html">Print | 
+<a href="videos/index.html">Video | 
+<a href="parentsteachers/index.html">Parents &amp; Teachers</a>
+<br />
+<a href="parentsteachers/site/sitemap.html">Site Map</a> |
+<a href="parentsteachers/site/copyright.html">&copy; <!--#config timefmt="%Y" --><!--#echo var="DATE_LOCAL" --> WGBH</a> | 
+<a href="/privacy/">PBS Kids Privacy Policy</a> | <a href="http://sgptv.org/programs/view/Martha_Speaks">Program Sponsorship</a>
+<br />
+<br />
+<a href="http://pbskids.org/mobile/apps.html"><img src="i/iPhone_banner.gif" width="549" height="66" alt="Martha Speaks Dog Party App for the iPhone and iPod Touch - http://pbskids.org/mobile/apps.html" border="0"/></a>
+</div>
+<br />
+<div style="width:590px;margin-left:210px;background:#fff;"><img src="i/station_top.gif" width="590" height="10" alt="" />
+<!--#if expr="$STATION_IMAGE != PBS.gif" -->
+<div style="width:78px;float:left;padding:2px 32px 0 24px;"><small>&nbsp;</small><span>Presented by:</span><br /><a href="/cgi-registry/kidsbridge.cgi?type=station&amp;program=martha&amp;dest=<!--#echo var='STATION_KIDS_PAGE' -->"><img src="http://www.pbs.org/images/stations/smallbw/<!--#echo var='STATION_IMAGE' -->" width="78" height="28" border="0" title="" alt="<!--#echo var='STATION_TVDATA_NAME' -->" /></a></div><p style="padding-top:6px;margin:0;line-height:16px;"><!--#include virtual="/.tunein/MSPE/${STATION_TVDATA_NAME}.html" --><br /><a href="/tvschedules/localizer.html?dest=/martha/&amp;nola=MSPE&amp;station=<!--#echo var='STATION_TVDATA_NAME' -->">Find another PBS station</a></p><!--#else -->
+<p style="text-align:center;padding:6px;margin:0;">Find out when Martha Speaks is on <a href="/tvschedules/localizer.html?nola=MSPE&amp;dest=/martha/">your local station</a>!</p>
+<!--#endif -->
+
+<!--CSS gives div class "funderbed" the background of funder-logos.gif, and defines coordinates for images for the below li links-->
+<div class="funderbed">
+	<ul>
+		<li id="wgbh"><a href="http://main.wgbh.org/">WGBH</a></li>
+		<li id="cpb"><a href="http://www.cpb.org">CPB</a></li>
+		<li id="dhx"><a href="http://www.dhxmedia.com/">DHX Media</a></li>
+		<li id="avdf"><a href="http://www.avdf.org/">The Arthur Vining Davis Foundations</a></li>
+		<li id="wgbh"><span>WGBH Children's Educational Media Fund</span></li>
+		<li id="ka"><a href="http://www.kiddieacademy.com">Kiddie Academy</a></li>
+		<li id="cfa"><a href="http://www.chick-fil-a.com/">Chick-fil-A</a></li>
+	</ul>
+</div>
+
+<img src="i/station_bottom.gif" alt="" width="590" height="10" /></div>
+
+<div style="margin:12px 0 0 329px;"><img src="i/funders2.gif" width="346" height="71" border="0" alt="US Department of Education, Corporation for Public Broadcasting, Arthur Vining Davis Foundations" title="" /></div>
+
+<div id="boilerplate">
+
+<p>MARTHA SPEAKS is a production of WGBH Boston and DHX Media.</p>
+
+<p>Corporate funding for Martha Speaks is provided by Kiddie Academy&reg; Child Care Learning Centers and Chick-fil-A, Inc. Additional series funding is provided by the Corporation for Public Broadcasting, by The Arthur Vining Davis Foundations...Dedicated to Strengthening America's Future Through Education, by the WGBH Children's Educational Media Fund and by public television viewers.</p>
+
+<p>&copy; 2013 WGBH Educational Foundation. All rights reserved. &quot;Martha&quot; and all characters and underlying materials (including artwork) from the &quot;Martha&quot; books are trademarks of and copyrights of Susan Meddaugh and used under license. All other characters and underlying materials are trademarks of and copyrights of WGBH.&nbsp;All third party trademarks are the property of their respective owners. Used with permission.</p>
+
+<div style="margin:12px 0 0 400px;"><a href="/read"><img src="i/raising_readers.gif" alt="Part of the PBS KIDS Raising Readers Campaign" width="185" height="65" border="0" /></a></div>
+
+
+</div>
+<script type="text/javascript">
+	if(!PBS_FlashCanPlay(9)) {
+		location.replace("/martha/martha_noflash.html");
+	}
+</script>
+</body>
+</html>
