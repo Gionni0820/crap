@@ -11,6 +11,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'tivo';
+    src: url('fonts/FranklinGothicLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 body, h1, h2, h3, h4, h5, h6, p, a {
   text-align: center;
 }
@@ -29,12 +35,12 @@ body {
 }
 
 h1 {
-   font-family: 'big_noodle_titling', sans-serif;
   text-align: center;
 }
+
 h3 {
   font-family: 'montserratalternates-black';
-  text-align: center;
+  
 }
 h4 {
   font-family: arial;
@@ -51,6 +57,7 @@ h6 {
 
 p {
   font-family: verdana;
+	font-st
   font-size: 20px;
 }
 a {
@@ -83,31 +90,103 @@ p.large {
 }
 .round-boarder {
   border: 5px solid white;
-  border-radius: 7px;
  width: 500px;
   display: inline; 
   background-color: white;
   
 }
+
+.header {
+	background-color: #6C1717;
+	width: 100%;
+	border-style: solid;
+  border-width: 4px;
+  border-color: #491400; 
+	border-radius: 0px 0px 10px 10px;
+	margin: 0 auto;
+	z-index: 10;
+	  background-image: url('Media/banner.png');
+  background-size:cover;
+  background-position: top;
+}
+.main-header {
+  	display: inline-flex;
+  	align-items: center; 
+	z-index: 9;
+	 margin-left: -350px;
+  border-radius: 10px;
+}
+
+.headertext {
+	
+		padding: 0px 20px;
+	color: white;
+	font-family: 'montserratalternates-black';
+	font-size: 30px;
+	margin-bottom: 5px;
+	margin-left: -40px;
+	text-decoration: none;
+	
+}
+
+.header-button {
+	margin-bottom: 83px;
+	 gap: 15px; 
+	
+}
+.header-container {
+ position: absolute; 
+	display: flex;
+
+	width: 90px;
+	height: 100px;
+  z-index: 10;  
+
+ 	
+}
+.header-button-text {
+  font-family: 'montserratalternates-black';
+  position: absolute;           
+  top: 30%;                     
+  left: 50%;                    
+  transform: translate(-50%, -30%); 
+  color: black;                 
+  text-align: center;                         
+  border-radius: px;  
+	width:100%;
+}
+
+.header-image {
+  width: 100px;                 
+  height: 100px;     
+	background-size: 100% 98%;
+	 background-repeat: no-repeat;
+	
+  background-image: url('/Media/button.png');
+  display: block; 
+	margin-bottom: -50px;
+	
+}
+
 p.border {
 	border-style: solid;
   border-width: 700px 400px;
 }
 
 .link{
-  color: blue; /* Default link color */
-  text-decoration: underline; /* Removes underline */
+  color: blue; 
+  text-decoration: underline; 
 }
 .link:hover {
-  color: red; /* Changes color on hover */
+  color: red; 
 }
 
 .link:active {
-  color: purple; /* Color when clicked */
+  color: purple; 
 }
 
 .link:visited {
-  color: #46a1ab; /* Color after the link is visited */
+  color: #46a1ab;
 }
 .montserrat {
 	font-family: 'montserratalternates-black';
@@ -119,34 +198,37 @@ p.border {
    background-repeat: no-repeat;
    background-position: top;
    background-attachment: fixed;
-  width: 100%; /* Ensure it takes full width */
+  width: 100%; 
   height: 2000px;
 
 }
 
 .overlay {
   margin: 0 auto;
-  width: 80%; /* Adjust size */
-  height: 3000px; /* Adjust size */
+  width: 80%; 
+  height: 3000px;
   background: transparent;
   padding: 100px;
-  
+  z-index: 3;
 }
 
 .overlay2 {
   margin: 0 auto;
-  width: 60%; /* Adjust size */
+  width: 60%; 
   background: #f7eddf;
-  padding: 50px;
+  padding: 0px 20px 0px 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   height: 3700px;
-   border-radius: 30px;
+	z-index: 2;
+   
 }
 
 .round {
-	border: 30px solid white;
-	 border-radius: 30px;
+	border: 10px solid white;
+	margin-top: -18px;
 	  background-color: white;
+	z-index: 1;
+	border-radius: 0px 0px 20px 20px;
 }
 .linkthing {
 	margin: 10px; 
@@ -161,77 +243,20 @@ p.border {
 	background-color: #e6ebfc;
 }
 
-.toppart {
-  position: absolute;           /* Fixes the header at the top of the page */
-  top: 0;                    /* Ensures it's at the top of the viewport */
-  left: 50%;                 /* Positions it at the center horizontally */
-  transform: translateX(-50%); /* Shifts the element left by 50% of its own width to center it */
-  width: 90%;                /* Set the width of the header (adjust as needed) */
-  height: 200px;             /* Fixed height for the header */
-  background-image: url('Media/topbackground.png');  /* Your background image */
-  background-size: cover;    /* Ensures the background image covers the entire header */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  z-index: 20;                /* Ensures it's above other content */
-  box-sizing: border-box;    /* Ensures padding and border don't affect the width */
-
-}
-
-/* Overlay for Text */
-.overlay {
-  position: absolute;        /* Position the content inside the header */
-  top: 50%;                  /* Center the content vertically */
-  left: 50%;                 /* Center the content horizontally */
-  transform: translate(-50%, -50%); /* Ensure exact centering */
-  text-align: center;        /* Align text in the center */
-  color: white;              /* White text color */
-}
 
 
-.toppart-image {
-  position: absolute;        /* Position the image relative to the header */
-  top: -5px;                /* Adjust this value to control how much the image overlaps */
-  left: 25%;                 /* Center the image horizontally */
-  transform: translateX(-50%); /* Shifts the element to the center */
-  width: 200px;              /* Set the width of the overlapping image */
-  height: auto;              /* Maintain aspect ratio of the image */
-  z-index: 20;                /* Ensure it is above the header content */
-}
-.toppart-button {
-  position: absolute;        /* Position the image relative to the header */
-  top: -5px;                /* Adjust this value to control how much the image overlaps */
-  left: 25%;                 /* Center the image horizontally */
-  transform: translateX(-50%); /* Shifts the element to the center */
-  width: 200px;              /* Set the width of the overlapping image */
-  height: auto;              /* Maintain aspect ratio of the image */
-  z-index: 2;                /* Ensure it is above the header content */
-}
-.headertext {
-	color: white; 
-	font-size: 65px;
-	position: absolute;
-	top: -10px;
-	left: 50%;
-}
-.rounded-image {
-  width: 300px;            /* Set the width of the image */
-  height: 300px;           /* Set the height of the image */
-  object-fit: cover;       /* Ensures the image covers the entire area without distortion */
-  border-radius: 10%;      /* Creates a circular shape by rounding the corners */
-  overflow: hidden;        /* Ensures the image is cropped to fit the rounded shape */
-}
 .profile-left {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
-  text-align: left; /* This is important to override the global center */
+  text-align: left; 
 }
 
 .profile-left img {
   width: 40px;
   height: 40px;
-  border-radius: 10%;         /* makes the image circular */
+  border-radius: 10%;       
 }
 .blog-post {
   display: flex;
@@ -241,7 +266,7 @@ p.border {
   max-width: 900px;
   margin: 0rem auto;
   text-align: left;
-    margin-left: 5px; /* <-- adjust this value */
+    margin-left: 5px; 
 }
 
 .blog-post .text {
@@ -249,13 +274,13 @@ p.border {
 }
 
 .blog-post .image {
-flex: 1; /* Let the image grow and shrink with the container */
-  max-width: 100%; /* Ensure the image does not overflow */
+flex: 1; 
+  max-width: 100%; 
 }
 
 .blog-post .image img {
-   width: 105%; /* Make the image responsive */
-  height: auto; /* Maintain the aspect ratio */
+   width: 105%;
+  height: auto; 
   border-radius: 10px;
 }
 .profile-info {
