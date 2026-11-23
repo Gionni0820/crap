@@ -24,7 +24,7 @@ async function loadEASFeed() {
 
         // Display the latest 5 captures
         items.forEach((item, index) => {
-            if (index >= 5) return;
+            if (index >= 8) return;
 
             const title = item.querySelector("title")?.textContent;
             const link = item.querySelector("link")?.textContent;
