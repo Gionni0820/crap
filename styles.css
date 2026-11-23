@@ -299,3 +299,22 @@ flex: 1;
   font-size: 0.9rem;
   color: gray;
 }
+
+#eas-feed {
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+#eas-feed a {
+    color: #4da6ff;
+    text-decoration: none;
+}
+
+#eas-feed a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#eas-feed a:visited {
+    color: #b388ff;
+}
